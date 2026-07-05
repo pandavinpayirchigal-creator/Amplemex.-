@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+  <link rel="stylesheet" href="./style.css">
+  <title>Amplemex Electronics Store</title>
+</head>
+
+<body>
+  <nav>
+    <a href="#" class="nav-logo">
+      <h1>Ample<span>mex</span></h1>
+    </a>
+
+    <div class="nav-country">
+      <i class="fa-solid fa-location-dot"></i>
+      <div>
+        <p>Deliver to</p>
+        <h1>India</h1>
+      </div>
+    </div>
+
+    <div class="nav-search">
+      <button class="nav-search-category" type="button">
+        <i class="fa-solid fa-fill-drip"></i>
+        <span>All</span>
+        <i class="fa-solid fa-sort"></i>
+      </button>
+
+      <input
+        type="text"
+        class="nav-search-input"
+        placeholder="Search electronics, sensors, tools..."
+        aria-label="Search products"
+      >
+
+      <button class="nav-search-button" type="button" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <div class="nav-language">
+      <i class="fa-solid fa-language"></i>
+      <p>EN</p>
+      <i class="fa-solid fa-sort"></i>
+    </div>
+
+    <a href="#products" class="nav-text account-link">
+      <p>Hello, sign in</p>
+      <h1>Account &amp; Lists <i class="fa-solid fa-sort"></i></h1>
+    </a>
+
+    <a href="#products" class="nav-text orders-link">
+      <p>Returns</p>
+      <h1>&amp; Orders</h1>
+    </a>
+
+    <button class="nav-cart" id="openCart" type="button">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h1>Cart</h1>
+      <span id="cartCount">0</span>
+    </button>
+  </nav>
+
+  <div class="nav-bottom">
+    <div class="nav-bottom-links">
+      <a href="#products" class="all-menu">
+        <i class="fa-solid fa-filter"></i>
+        <span>All</span>
+      </a>
+
+      <a href="#products">Today's Deals</a>
+      <a href="#products">Customer Service</a>
+      <a href="#products">Arduino</a>
+      <a href="#products">Sensors</a>
+      <a href="#products">Tools</a>
+    </div>
+  </div>
+
+  <section class="header-slider">
+    <button class="control-prev" aria-label="Previous slide">&#8592;</button>
+    <button class="control-next" aria-label="Next slide">&#8594;</button>
+
+    <ul class="slider-list">
+      <li class="slide">
+        <div class="banner banner-one">
+          <div>
+            <p>AMPLEMEX ELECTRONICS</p>
+            <h2>Build your next<br>big idea.</h2>
+            <span>Arduino, Raspberry Pi, sensors and robotics parts.</span>
+          </div>
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+      </li>
+
+      <li class="slide">
+        <div class="banner banner-two">
+          <div>
+            <p>ROBOTICS STARTER SHOP</p>
+            <h2>Make. Test.<br>Create.</h2>
+            <span>Everything needed for your first robot project.</span>
+          </div>
+          <i class="fa-solid fa-robot"></i>
+        </div>
+      </li>
+
+      <li class="slide">
+        <div class="banner banner-three">
+          <div>
+            <p>TOOLS & COMPONENTS</p>
+            <h2>Parts for every<br>prototype.</h2>
+            <span>Fast delivery across India.</span>
+          </div>
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+      </li>
+    </ul>
+
+    <div class="slider-dots" aria-label="Slider navigation"></div>
+  </section>
+<div class="running">
+  We are conducting a coursefor robotics and Web development.For more details Call<br> +91 88258 16511</div>
+  <main>
+    <section class="store-heading" id="products">
+      <div>
+        <p>AMPLEMEX STORE</p>
+        <h2>Electronics, Robotics & DIY Components</h2>
+      </div>
+      <p id="productCount">0 products available</p>
+    </section>
+
+    <section class="products-grid" id="productsGrid"></section>
+  </main>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Your Cart</h2>
+      <button id="closeCart" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button class="checkout-btn" id="checkoutButton">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
